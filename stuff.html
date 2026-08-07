@@ -13,28 +13,74 @@
   <link rel="stylesheet" href="./style.css?v=3">
 </head>
 
-<body>
-  <main class="profile-card">
+<body class="error-page">
 
-    <div class="avatar">
-      CP
-    </div>
+  <main class="error-screen">
 
-    <p class="status">
-      <span class="status-dot"></span>
-      Signal lost
-    </p>
+    <header class="error-header">
 
-    <p class="error-code">
-      404
-    </p>
+      <div class="error-brand">
+        <div class="mini-avatar">CP</div>
+        <span>CMD-PRO</span>
+      </div>
 
-    <p class="username">
-      ERR_STUFF_NOT_FOUND
-    </p>
+      <p class="status error-status">
+        <span class="status-dot"></span>
+        Signal lost
+      </p>
 
-    <p class="error-message">
-      Nothing here yet.<br>
+    </header>
+
+
+    <section class="error-content">
+
+      <div class="error-number">
+        404
+      </div>
+
+      <div class="error-info">
+
+        <p class="error-label">
+          ERR_STUFF_NOT_FOUND
+        </p>
+
+        <h1 class="error-title">
+          Nothing here.
+        </h1>
+
+        <p class="error-description">
+          This sector of the network has not been mapped yet.
+        </p>
+
+        <a
+          class="error-return"
+          href="./index.html"
+        >
+          <span>Return Home</span>
+          <span>←</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <footer class="error-footer">
+
+      <span>
+        ◉ Sector 0x00 · Unmapped
+      </span>
+
+      <span>
+        cmd-pro.win
+      </span>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>      Nothing here yet.<br>
       This sector is still under construction.
     </p>
 
