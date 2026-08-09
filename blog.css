@@ -275,6 +275,36 @@ h1 {
   letter-spacing: 1px;
 }
 
+.entry-link {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.entry-link:hover {
+  border-color: rgba(53, 255, 154, 0.42);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.entry-link:hover .entry-status {
+  color: var(--accent);
+}
+
+.entry-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
 
 /* Return */
 
