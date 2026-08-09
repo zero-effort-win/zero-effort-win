@@ -13,6 +13,6 @@ Technology enthusiast exploring software, systems & the internet.
 - How software and systems work
 - New tools and technologies
 - Personal projects and experiments
-- The less visible parts of the internet
+- The whole internet
 
 Just an enthusiast exploring things that interest me.
