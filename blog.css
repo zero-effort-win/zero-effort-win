@@ -340,25 +340,27 @@ footer {
     padding: 26px 20px;
   }
 
-  .blog-header {
-    align-items: flex-start;
-  }
+.blog-header {
+  align-items: center;
+  gap: 14px;
+}
 
-  .brand {
-    gap: 10px;
-  }
+.brand {
+  gap: 10px;
+  font-size: 0.76rem;
+  letter-spacing: 1.5px;
+}
 
-  .mini-avatar {
-    width: 42px;
-    height: 42px;
-  }
+.mini-avatar {
+  width: 42px;
+  height: 42px;
+}
 
-  .brand > span {
-    display: none;
-  }
-
-  .status {
-    margin-top: 14px;
+.status {
+  margin-top: 0;
+  font-size: 0.68rem;
+  letter-spacing: 1.2px;
+}
 
     font-size: 0.68rem;
   }
