@@ -91,28 +91,6 @@ body {
   text-decoration: none;
 }
 
-.mini-avatar {
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--accent);
-
-  font-family: monospace;
-  font-weight: bold;
-
-  background: rgba(53, 255, 154, 0.05);
-
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-
-  box-shadow:
-    0 0 22px rgba(53, 255, 154, 0.14);
-}
-
 .status {
   display: flex;
   align-items: center;
@@ -381,19 +359,11 @@ footer {
   letter-spacing: 1.5px;
 }
 
-.mini-avatar {
-  width: 42px;
-  height: 42px;
-}
-
 .status {
   margin-top: 0;
   font-size: 0.68rem;
   letter-spacing: 1.2px;
 }
-
-    font-size: 0.68rem;
-  }
 
   .blog-content {
     margin-top: 75px;
@@ -428,19 +398,4 @@ footer {
 
     gap: 8px;
   }
-}
-
-/* Terminal mark */
-
-.mini-avatar .terminal-mark {
-  display: inline-block;
-
-  font-family: monospace;
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1;
-
-  letter-spacing: -1.5px;
-
-  transform: translateY(-1px);
 }

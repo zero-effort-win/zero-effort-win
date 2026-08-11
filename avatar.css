@@ -1,0 +1,145 @@
+/* Shared CMD-PRO terminal avatar */
+
+.terminal-avatar {
+  --terminal-size: 48px;
+  --terminal-glyph-size: 70%;
+
+  position: relative;
+  isolation: isolate;
+
+  width: var(--terminal-size);
+  height: var(--terminal-size);
+
+  flex: 0 0 var(--terminal-size);
+  display: grid;
+  place-items: center;
+
+  color: var(--accent);
+
+  background:
+    radial-gradient(
+      circle at 32% 24%,
+      rgba(139, 255, 197, 0.2),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(53, 255, 154, 0.12),
+      rgba(3, 10, 7, 0.88)
+    );
+
+  border: 1px solid rgba(53, 255, 154, 0.82);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 1px rgba(53, 255, 154, 0.05),
+    0 0 18px rgba(53, 255, 154, 0.18),
+    0 10px 25px rgba(0, 0, 0, 0.42),
+    inset 0 0 20px rgba(53, 255, 154, 0.1),
+    inset 0 1px 0 rgba(205, 255, 230, 0.16);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.terminal-avatar::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  inset: -16%;
+
+  background: radial-gradient(
+    circle,
+    rgba(53, 255, 154, 0.25),
+    transparent 66%
+  );
+  border-radius: inherit;
+
+  filter: blur(8px);
+  opacity: 0.55;
+
+  animation: terminal-avatar-glow 4s ease-in-out infinite;
+}
+
+.terminal-avatar::after {
+  content: "";
+
+  position: absolute;
+  inset: 7%;
+
+  border: 1px solid rgba(179, 255, 217, 0.12);
+  border-radius: inherit;
+
+  box-shadow: inset 0 0 12px rgba(53, 255, 154, 0.08);
+  pointer-events: none;
+}
+
+.terminal-avatar--hero {
+  --terminal-size: 112px;
+  --terminal-glyph-size: 72%;
+
+  border-color: rgba(53, 255, 154, 0.9);
+
+  box-shadow:
+    0 0 0 1px rgba(53, 255, 154, 0.08),
+    0 0 24px rgba(53, 255, 154, 0.28),
+    0 0 58px rgba(53, 255, 154, 0.12),
+    0 18px 38px rgba(0, 0, 0, 0.5),
+    inset 0 0 30px rgba(53, 255, 154, 0.12),
+    inset 0 1px 0 rgba(205, 255, 230, 0.2);
+}
+
+.terminal-avatar .terminal-mark {
+  width: var(--terminal-glyph-size);
+  height: var(--terminal-glyph-size);
+
+  display: block;
+  overflow: visible;
+
+  color: var(--accent);
+
+  filter:
+    drop-shadow(0 0 4px rgba(53, 255, 154, 0.72))
+    drop-shadow(0 0 10px rgba(53, 255, 154, 0.24));
+
+  transform: translate(-4%, -2%);
+}
+
+.brand:hover .terminal-avatar {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 1px rgba(53, 255, 154, 0.1),
+    0 0 24px rgba(53, 255, 154, 0.3),
+    0 12px 28px rgba(0, 0, 0, 0.42),
+    inset 0 0 22px rgba(53, 255, 154, 0.13);
+
+  transform: translateY(-1px);
+}
+
+@keyframes terminal-avatar-glow {
+  0%, 100% {
+    opacity: 0.42;
+    transform: scale(0.94);
+  }
+
+  50% {
+    opacity: 0.72;
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal-avatar--mini {
+    --terminal-size: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-avatar::before {
+    animation: none;
+  }
+}
