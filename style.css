@@ -831,8 +831,8 @@ footer {
 /* Terminal avatar */
 
 .avatar .terminal-mark {
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
 
   display: block;
 
