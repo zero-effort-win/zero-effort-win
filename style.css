@@ -690,7 +690,7 @@ footer {
       rgba(53, 255, 154, 0.025)
     );
 
-  border: 6px solid var(--accent);
+  border: 3px solid var(--accent);
   border-radius: 50%;
 
   box-shadow:
