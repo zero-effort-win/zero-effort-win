@@ -429,3 +429,18 @@ footer {
     gap: 8px;
   }
 }
+
+/* Terminal mark */
+
+.mini-avatar .terminal-mark {
+  display: inline-block;
+
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+
+  transform: translateY(-1px);
+}
