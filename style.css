@@ -827,3 +827,18 @@ footer {
     font-size: 1.85rem;
   }
 }
+
+/* Terminal avatar */
+
+.avatar .terminal-mark {
+  display: inline-block;
+
+  font-family: monospace;
+  font-size: 2.65rem;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  transform: translateY(-2px);
+}
