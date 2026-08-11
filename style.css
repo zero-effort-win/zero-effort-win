@@ -111,7 +111,7 @@ body {
       rgba(53, 255, 154, 0.025)
     );
 
-  border: 1px solid var(--accent);
+  border: 4.5px solid var(--accent);
   border-radius: 50%;
 
   box-shadow:
@@ -298,9 +298,4 @@ footer {
   .profile-link {
     min-height: 60px;
   }
-}
-
-/* Avatar border override */
-.avatar {
-  border: 2px solid var(--accent);
 }
