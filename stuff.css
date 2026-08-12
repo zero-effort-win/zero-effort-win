@@ -89,7 +89,7 @@ body.error-page {
   letter-spacing: -18px;
 
   text-shadow:
-    0 0 45px rgba(53, 255, 154, 0.22);
+    0 0 45px rgba(4, 254, 220, 0.22);
 }
 
 .error-info {
@@ -180,7 +180,7 @@ body.error-page {
   align-items: center;
   justify-content: space-between;
 
-  color: #526159;
+  color: #506663;
 
   font-family: monospace;
   font-size: 0.72rem;

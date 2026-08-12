@@ -6,22 +6,22 @@
 >
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#10271d" />
-      <stop offset="0.55" stop-color="#08120e" />
-      <stop offset="1" stop-color="#030706" />
+      <stop offset="0" stop-color="#0b2926" />
+      <stop offset="0.55" stop-color="#071413" />
+      <stop offset="1" stop-color="#030807" />
     </linearGradient>
 
     <radialGradient id="halo" cx="0.42" cy="0.34" r="0.72">
-      <stop offset="0" stop-color="#35ff9a" stop-opacity="0.22" />
-      <stop offset="0.55" stop-color="#35ff9a" stop-opacity="0.05" />
-      <stop offset="1" stop-color="#35ff9a" stop-opacity="0" />
+      <stop offset="0" stop-color="#04fedc" stop-opacity="0.22" />
+      <stop offset="0.55" stop-color="#04fedc" stop-opacity="0.05" />
+      <stop offset="1" stop-color="#04fedc" stop-opacity="0" />
     </radialGradient>
 
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path
         d="M48 0H0V48"
         fill="none"
-        stroke="#35ff9a"
+        stroke="#04fedc"
         stroke-opacity="0.055"
         stroke-width="2"
       />
@@ -44,9 +44,9 @@
     cx="256"
     cy="256"
     r="174"
-    fill="#07110d"
+    fill="#071310"
     fill-opacity="0.82"
-    stroke="#35ff9a"
+    stroke="#04fedc"
     stroke-opacity="0.78"
     stroke-width="8"
   />
@@ -55,14 +55,14 @@
     cy="256"
     r="154"
     fill="none"
-    stroke="#c4ffe1"
+    stroke="#c4fff7"
     stroke-opacity="0.12"
     stroke-width="4"
   />
 
   <g
     fill="none"
-    stroke="#57ffab"
+    stroke="#39ffe5"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="34"
