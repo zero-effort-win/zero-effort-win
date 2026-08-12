@@ -28,7 +28,7 @@
       rgba(3, 10, 10, 0.88)
     );
 
-  border: 1px solid rgba(4, 254, 220, 0.82);
+  border: 7px solid rgba(4, 254, 220, 0.82);
   border-radius: 50%;
 
   box-shadow:
@@ -105,7 +105,7 @@
     drop-shadow(0 0 4px rgba(4, 254, 220, 0.72))
     drop-shadow(0 0 10px rgba(4, 254, 220, 0.24));
 
-  transform: translate(-4%, -2%);
+  transform: translate(-4%, -4%);
 }
 
 .brand:hover .terminal-avatar {
@@ -142,4 +142,16 @@
   .terminal-avatar::before {
     animation: none;
   }
+}
+
+.terminal-avatar--mini {
+  border-width: 4px;
+}
+
+.terminal-avatar--mini::after {
+  border-width: 1.5px;
+}
+
+.terminal-avatar--mini .terminal-mark path {
+  stroke-width: 9;
 }
