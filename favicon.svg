@@ -12,16 +12,16 @@
     </linearGradient>
 
     <radialGradient id="halo" cx="0.42" cy="0.34" r="0.72">
-      <stop offset="0" stop-color="#152eff" stop-opacity="0.38" />
-      <stop offset="0.55" stop-color="#152eff" stop-opacity="0.11" />
-      <stop offset="1" stop-color="#152eff" stop-opacity="0" />
+      <stop offset="0" stop-color="#316bff" stop-opacity="0.3" />
+      <stop offset="0.55" stop-color="#316bff" stop-opacity="0.08" />
+      <stop offset="1" stop-color="#316bff" stop-opacity="0" />
     </radialGradient>
 
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path
         d="M48 0H0V48"
         fill="none"
-        stroke="#152eff"
+        stroke="#316bff"
         stroke-opacity="0.055"
         stroke-width="2"
       />
@@ -46,7 +46,7 @@
     r="174"
     fill="#060b1d"
     fill-opacity="0.82"
-    stroke="#152eff"
+    stroke="#316bff"
     stroke-opacity="0.78"
     stroke-width="8"
   />
@@ -62,7 +62,7 @@
 
   <g
     fill="none"
-    stroke="#6574ff"
+    stroke="#7198ff"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="34"
