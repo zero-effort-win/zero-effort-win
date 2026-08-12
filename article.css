@@ -14,6 +14,8 @@
 
 html {
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -172,6 +174,11 @@ body {
   line-height: 1.04;
 
   letter-spacing: -1.5px;
+  overflow-wrap: anywhere;
+}
+
+.article-title .title-word {
+  white-space: nowrap;
 }
 
 .article-lead {
@@ -309,6 +316,16 @@ footer {
     gap: 14px;
   }
 
+  .article-header .brand,
+  .article-header .status {
+    flex-shrink: 0;
+  }
+
+  .article-header .brand > span,
+  .article-header .status > span:last-child {
+    white-space: nowrap;
+  }
+
   .brand {
     gap: 10px;
 
@@ -332,7 +349,9 @@ footer {
   }
 
   .article-title h1 {
-    letter-spacing: -0.8px;
+    font-size: clamp(2rem, 10vw, 2.45rem);
+    line-height: 1.08;
+    letter-spacing: -0.7px;
   }
 
   .article-body {
@@ -361,5 +380,23 @@ footer {
     align-items: flex-start;
 
     gap: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  .article-header {
+    gap: 9px;
+  }
+
+  .article-header .brand {
+    gap: 8px;
+    font-size: 0.7rem;
+    letter-spacing: 1.1px;
+  }
+
+  .article-header .status {
+    gap: 7px;
+    font-size: 0.62rem;
+    letter-spacing: 0.8px;
   }
 }
