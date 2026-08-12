@@ -1,12 +1,12 @@
 :root {
   --background: #05070a;
   --panel: rgba(10, 16, 22, 0.82);
-  --text: #eaf7ff;
-  --muted: #8396a3;
-  --soft-text: #a7b9c5;
-  --accent: #38bdf8;
-  --accent-dark: rgba(56, 189, 248, 0.12);
-  --border: rgba(56, 189, 248, 0.18);
+  --text: #e7fff4;
+  --muted: #83968d;
+  --soft-text: #a6b8af;
+  --accent: #35ff9a;
+  --accent-dark: rgba(53, 255, 154, 0.12);
+  --border: rgba(53, 255, 154, 0.18);
 }
 
 * {
@@ -31,17 +31,17 @@ body {
 
   background:
     linear-gradient(
-      rgba(56, 189, 248, 0.025) 1px,
+      rgba(53, 255, 154, 0.025) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(56, 189, 248, 0.025) 1px,
+      rgba(53, 255, 154, 0.025) 1px,
       transparent 1px
     ),
     radial-gradient(
       circle at top,
-      #0b2030 0%,
+      #10251c 0%,
       #05070a 48%
     );
 
@@ -266,7 +266,7 @@ h1 {
 }
 
 .entry-link:hover {
-  border-color: rgba(56, 189, 248, 0.42);
+  border-color: rgba(53, 255, 154, 0.42);
 
   transform: translateY(-2px);
 
@@ -333,7 +333,7 @@ footer {
 
   gap: 24px;
 
-  color: #526675;
+  color: #526159;
 
   font-family: monospace;
   font-size: 0.72rem;
