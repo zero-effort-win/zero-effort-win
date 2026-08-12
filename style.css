@@ -3,9 +3,9 @@
   --card: rgba(10, 16, 22, 0.9);
   --text: #eef3ff;
   --muted: #8792aa;
-  --accent: #316bff;
-  --accent-dark: rgba(49, 107, 255, 0.12);
-  --border: rgba(49, 107, 255, 0.2);
+  --accent: #152eff;
+  --accent-dark: rgba(21, 46, 255, 0.12);
+  --border: rgba(21, 46, 255, 0.2);
 }
 
 
@@ -40,12 +40,12 @@ body {
 
   background:
     linear-gradient(
-      rgba(49, 107, 255, 0.03) 1px,
+      rgba(21, 46, 255, 0.03) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(49, 107, 255, 0.03) 1px,
+      rgba(21, 46, 255, 0.03) 1px,
       transparent 1px
     ),
     radial-gradient(
@@ -78,7 +78,7 @@ body {
 
   box-shadow:
     0 30px 90px rgba(0, 0, 0, 0.55),
-    0 0 44px rgba(49, 107, 255, 0.07);
+    0 0 44px rgba(21, 46, 255, 0.09);
 
   backdrop-filter: blur(14px);
 }

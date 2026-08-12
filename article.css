@@ -4,8 +4,8 @@
   --text: #eef3ff;
   --muted: #8792aa;
   --soft-text: #adb8ce;
-  --accent: #316bff;
-  --border: rgba(49, 107, 255, 0.2);
+  --accent: #152eff;
+  --border: rgba(21, 46, 255, 0.2);
 }
 
 * {
@@ -32,12 +32,12 @@ body {
 
   background:
     linear-gradient(
-      rgba(49, 107, 255, 0.03) 1px,
+      rgba(21, 46, 255, 0.03) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(49, 107, 255, 0.03) 1px,
+      rgba(21, 46, 255, 0.03) 1px,
       transparent 1px
     ),
     radial-gradient(
@@ -241,7 +241,7 @@ blockquote {
   font-family: monospace;
   font-size: 0.9rem;
 
-  background: rgba(49, 107, 255, 0.045);
+  background: rgba(21, 46, 255, 0.055);
 
   border: 1px solid var(--border);
   border-radius: 8px;
