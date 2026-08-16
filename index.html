@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sitio no disponible</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="stylesheet" href="/style.css">
+  <title>Site Unavailable</title>
 
   <style>
+    :root {
+      --background: #05070a;
+      --text: #e7fff4;
+      --muted: #83968d;
+      --accent: #35ff9a;
+      --border: rgba(53, 255, 154, 0.18);
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -16,55 +27,168 @@
     body {
       min-height: 100vh;
       margin: 0;
+      padding: 24px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      padding: 24px;
+      color: var(--text);
 
-      background: #05070a;
-      color: #e7fff4;
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
 
-      font-family: monospace;
+      background:
+        linear-gradient(
+          rgba(53, 255, 154, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(53, 255, 154, 0.025) 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at top,
+          #10251c 0%,
+          var(--background) 48%
+        );
+
+      background-size:
+        32px 32px,
+        32px 32px,
+        auto;
     }
 
-    main {
-      text-align: center;
+    .terminal {
+      width: 100%;
+      max-width: 620px;
+
+      padding: 34px;
+
+      background: rgba(10, 16, 22, 0.88);
+
+      border: 1px solid var(--border);
+      border-radius: 16px;
+
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.55),
+        0 0 40px rgba(53, 255, 154, 0.05);
     }
 
     .status {
-      margin-bottom: 18px;
+      margin-bottom: 26px;
 
-      color: #FF0000;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--muted);
+
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+
+      background: #ff4d4d;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 12px rgba(255, 77, 77, 0.8);
+    }
+
+    .prompt {
+      margin-bottom: 14px;
+
+      color: var(--accent);
+
+      font-size: 0.85rem;
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 18px;
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(2rem, 8vw, 4rem);
-      letter-spacing: 3px;
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: clamp(2rem, 7vw, 3.4rem);
+
+      letter-spacing: 2px;
     }
 
     p {
-      margin-top: 18px;
+      margin: 0;
 
-      color: #83968d;
+      color: var(--muted);
+
       line-height: 1.7;
+    }
+
+    .cursor {
+      display: inline-block;
+
+      width: 8px;
+      height: 1em;
+
+      margin-left: 5px;
+
+      vertical-align: -2px;
+
+      background: var(--accent);
+
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .terminal {
+        padding: 26px 22px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <div class="status">🔴 FUERA DE LÍNEA</div>
 
-    <h1>SITIO NO DISPONIBLE</h1>
+  <main class="terminal">
 
-    <p>contacto@cmd-pro.win</p>
+    <div class="status">
+      <span class="status-dot"></span>
+      <span>SYSTEM OFFLINE</span>
+    </div>
+
+    <div class="prompt">
+      &gt; status
+    </div>
+
+    <h1>
+      SITE UNAVAILABLE
+    </h1>
+
+    <p>
+      This sector of the network is temporarily unavailable.<br>
+      Check back later.<span class="cursor"></span>
+    </p>
+
   </main>
+
 </body>
+
 </html>
