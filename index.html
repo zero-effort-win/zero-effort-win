@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="theme-color" content="#05070a">
   <meta charset="UTF-8">
 
   <meta
@@ -157,6 +158,21 @@
       }
     }
 
+    .email {
+  display: inline-block;
+  margin-top: 48px;
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.email:hover {
+  color: var(--accent);
+}
+
     @media (max-width: 520px) {
   .terminal {
     padding: 26px 22px;
@@ -174,21 +190,6 @@
   }
 }
     }
-
-    .email {
-  display: inline-block;
-  margin-top: 40px;
-
-  color: var(--muted);
-
-  font-size: 0.8rem;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.email:hover {
-  color: var(--accent);
-}
   </style>
 </head>
 
@@ -213,11 +214,6 @@
       This sector of the network is temporarily unavailable.<br>
       Check back later.<span class="cursor"></span>
     </p>
-
-    <p>
-  This sector of the network is temporarily unavailable.<br>
-  Check back later.<span class="cursor"></span>
-</p>
 
 <a class="email" href="mailto:contact@cmd-pro.win">
   contact@cmd-pro.win
