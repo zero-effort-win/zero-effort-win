@@ -4,8 +4,8 @@
 <head>
   <meta name="theme-color" content="#05070a">
   <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png?v=1" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
+  <link rel="icon" href="/favicon-32.png?v=1" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
   <meta charset="UTF-8">
 
 <meta
@@ -28,10 +28,30 @@
       box-sizing: border-box;
     }
 
-    html {
+html {
   min-height: 100%;
-  background: #05070a;
   color-scheme: dark;
+
+  background:
+    linear-gradient(
+      rgba(53, 255, 154, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(53, 255, 154, 0.025) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at top,
+      #10251c 0%,
+      #05070a 48%
+    );
+
+  background-size:
+    32px 32px,
+    32px 32px,
+    auto;
 }
 
     body {
@@ -52,27 +72,6 @@
         Monaco,
         Consolas,
         monospace;
-
-      background:
-        linear-gradient(
-          rgba(53, 255, 154, 0.025) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(53, 255, 154, 0.025) 1px,
-          transparent 1px
-        ),
-        radial-gradient(
-          circle at top,
-          #10251c 0%,
-          var(--background) 48%
-        );
-
-      background-size:
-        32px 32px,
-        32px 32px,
-        auto;
     }
 
     .terminal {
