@@ -147,18 +147,24 @@
       gap: 7px;
     }
 
-    .control {
-      width: 9px;
-      height: 9px;
+.control {
+  width: 10px;
+  height: 10px;
 
-      border-radius: 50%;
+  border-radius: 50%;
+}
 
-      background: rgba(131, 150, 141, 0.32);
-    }
+.control:nth-child(1) {
+  background: #ff5f57;
+}
 
-    .control:first-child {
-      background: rgba(255, 77, 77, 0.75);
-    }
+.control:nth-child(2) {
+  background: #febc2e;
+}
+
+.control:nth-child(3) {
+  background: #28c840;
+}
 
     .terminal-title {
       position: absolute;
@@ -182,33 +188,17 @@
       padding: 34px 36px 38px;
     }
 
-    .status {
-      margin-bottom: 32px;
+.status {
+  margin-bottom: 32px;
 
-      display: flex;
-      align-items: center;
-      gap: 9px;
+  display: flex;
+  align-items: center;
 
-      color: var(--muted);
+  color: var(--muted);
 
-      font-size: 0.72rem;
-
-      letter-spacing: 1.5px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-
-      flex-shrink: 0;
-
-      background: var(--offline);
-
-      border-radius: 50%;
-
-      box-shadow:
-        0 0 12px rgba(255, 77, 77, 0.85);
-    }
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
 
     .prompt {
       margin: 0 0 16px;
@@ -407,12 +397,11 @@
 
     <div class="terminal-body">
 
-      <div class="status">
-        <span class="status-dot"></span>
-        <span>SISTEMA OFFLINE</span>
-      </div>
+<div class="status">
+  <span>SISTEMA OFFLINE</span>
+</div>
 
-
+      
       <div class="prompt">
         Estado
       </div>
