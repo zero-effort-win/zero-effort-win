@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta name="theme-color" content="#05070a">
-  <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png?v=1" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1"> 
   <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#08130e">
+
+  <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png?v=1" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
 
   <title>Sitio no disponible</title>
 
   <style>
     :root {
       --background: #05070a;
+      --surface: rgba(7, 13, 10, 0.68);
+      --surface-strong: rgba(7, 13, 10, 0.82);
+
       --text: #e7fff4;
       --muted: #83968d;
+
       --accent: #35ff9a;
-      --border: rgba(53, 255, 154, 0.18);
+      --border: rgba(53, 255, 154, 0.20);
+
+      --offline: #ff4d4d;
     }
 
     * {
@@ -29,15 +37,44 @@
     }
 
     html {
-  min-height: 100%;
-  background: #05070a;
-  color-scheme: dark;
-}
+      min-height: 100%;
+
+      color-scheme: dark;
+
+      background:
+        linear-gradient(
+          rgba(53, 255, 154, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(53, 255, 154, 0.025) 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 50% 0%,
+          #123024 0%,
+          #0b1912 24%,
+          #05070a 58%
+        );
+
+      background-size:
+        32px 32px,
+        32px 32px,
+        auto;
+
+      background-attachment: fixed;
+    }
 
     body {
       min-height: 100dvh;
       margin: 0;
-      padding: 24px;
+
+      padding:
+        max(24px, env(safe-area-inset-top))
+        max(20px, env(safe-area-inset-right))
+        max(24px, env(safe-area-inset-bottom))
+        max(20px, env(safe-area-inset-left));
 
       display: flex;
       align-items: center;
@@ -51,48 +88,102 @@
         Menlo,
         Monaco,
         Consolas,
+        "Liberation Mono",
         monospace;
 
-      background:
-        linear-gradient(
-          rgba(53, 255, 154, 0.025) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(53, 255, 154, 0.025) 1px,
-          transparent 1px
-        ),
-        radial-gradient(
-          circle at top,
-          #10251c 0%,
-          var(--background) 48%
-        );
-
-      background-size:
-        32px 32px,
-        32px 32px,
-        auto;
+      background: transparent;
     }
+
+
+    /* =========================
+       TERMINAL WINDOW
+       ========================= */
 
     .terminal {
       width: 100%;
-      max-width: 620px;
+      max-width: 650px;
 
-      padding: 34px;
+      overflow: hidden;
 
-      background: rgba(10, 16, 22, 0.88);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(12, 22, 17, 0.76),
+          rgba(5, 9, 7, 0.72)
+        );
 
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 10px;
 
       box-shadow:
-        0 30px 90px rgba(0, 0, 0, 0.55),
-        0 0 40px rgba(53, 255, 154, 0.05);
+        0 26px 90px rgba(0, 0, 0, 0.48),
+        0 0 55px rgba(53, 255, 154, 0.055);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+
+    /* =========================
+       TERMINAL TITLE BAR
+       ========================= */
+
+    .terminal-bar {
+      min-height: 42px;
+
+      padding: 0 14px;
+
+      display: flex;
+      align-items: center;
+
+      background: rgba(3, 7, 5, 0.55);
+
+      border-bottom: 1px solid rgba(53, 255, 154, 0.12);
+    }
+
+    .terminal-controls {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .control {
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: rgba(131, 150, 141, 0.32);
+    }
+
+    .control:first-child {
+      background: rgba(255, 77, 77, 0.75);
+    }
+
+    .terminal-title {
+      position: absolute;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      color: #617069;
+
+      font-size: 0.66rem;
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       TERMINAL CONTENT
+       ========================= */
+
+    .terminal-body {
+      padding: 34px 36px 38px;
     }
 
     .status {
-      margin-bottom: 26px;
+      margin-bottom: 32px;
 
       display: flex;
       align-items: center;
@@ -100,7 +191,8 @@
 
       color: var(--muted);
 
-      font-size: 0.75rem;
+      font-size: 0.72rem;
+
       letter-spacing: 1.5px;
     }
 
@@ -108,62 +200,78 @@
       width: 8px;
       height: 8px;
 
-      background: #ff4d4d;
+      flex-shrink: 0;
+
+      background: var(--offline);
 
       border-radius: 50%;
 
       box-shadow:
-        0 0 12px rgba(255, 77, 77, 0.8);
+        0 0 12px rgba(255, 77, 77, 0.85);
     }
 
     .prompt {
-      margin-bottom: 14px;
+      margin: 0 0 16px;
 
       color: var(--accent);
 
-      font-size: 0.85rem;
+      font-size: 0.84rem;
+    }
+
+    .prompt::before {
+      content: "> ";
     }
 
     h1 {
-      margin: 0 0 18px;
+      margin: 0 0 22px;
 
-      font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        sans-serif;
+      color: var(--text);
 
-      font-size: clamp(2rem, 7vw, 3.4rem);
+      font-family: inherit;
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      font-weight: 700;
 
-      letter-spacing: 2px;
+      line-height: 1.15;
+
+      letter-spacing: 1px;
     }
 
-    p {
+    .message {
+      max-width: 520px;
       margin: 0;
 
       color: var(--muted);
 
-      line-height: 1.7;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+
+    /* =========================
+       CURSOR
+       ========================= */
+
+    .cursor-tail {
+      white-space: nowrap;
     }
 
     .cursor {
-      display: inline-block;
-
-      width: 8px;
+      width: 7px;
       height: 1em;
 
       margin-left: 5px;
+
+      display: inline-block;
 
       vertical-align: -2px;
 
       background: var(--accent);
 
+      box-shadow:
+        0 0 7px rgba(53, 255, 154, 0.4);
+
       animation: blink 1s steps(1) infinite;
     }
-
-    .cursor-tail {
-  white-space: nowrap;
-}
 
     @keyframes blink {
       50% {
@@ -171,67 +279,166 @@
       }
     }
 
-.email {
-  display: inline-block;
-  margin-top: 48px;
 
-  color: var(--accent);
+    /* =========================
+       EMAIL
+       ========================= */
 
-  font-size: 0.8rem;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(53, 255, 154, 0.35);
-}
+    .email {
+      width: fit-content;
 
-.email:hover {
-  text-decoration: underline;
-}
+      margin-top: 44px;
+
+      display: inline-block;
+
+      color: var(--accent);
+
+      font-size: 0.76rem;
+
+      text-decoration: none;
+      letter-spacing: 0.8px;
+
+      text-shadow:
+        0 0 8px rgba(53, 255, 154, 0.28);
+    }
+
+    .email::before {
+      content: "> ";
+      color: var(--muted);
+    }
+
+    .email:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 520px) {
-  .terminal {
-    padding: 26px 22px;
-  }
 
-  h1 {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    line-height: 1.25;
-  }
+      body {
+        align-items: center;
+      }
 
-  p {
-    font-size: 0.9rem;
-    line-height: 1.65;
-  }
-}
+      .terminal {
+        border-radius: 8px;
+      }
+
+      .terminal-bar {
+        min-height: 38px;
+        padding: 0 12px;
+      }
+
+      .control {
+        width: 8px;
+        height: 8px;
+      }
+
+      .terminal-title {
+        font-size: 0.59rem;
+      }
+
+      .terminal-body {
+        padding: 27px 22px 30px;
+      }
+
+      .status {
+        margin-bottom: 28px;
+
+        font-size: 0.67rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+
+        line-height: 1.22;
+
+        letter-spacing: 0.5px;
+      }
+
+      .message {
+        font-size: 0.88rem;
+        line-height: 1.7;
+      }
+
+      .email {
+        margin-top: 38px;
+
+        font-size: 0.72rem;
+      }
+    }
+
+
+    @media (max-width: 350px) {
+
+      .terminal-title {
+        display: none;
+      }
+
+      h1 {
+        font-size: 1.55rem;
+      }
+    }
+
   </style>
 </head>
+
 
 <body>
 
   <main class="terminal">
 
-    <div class="status">
-      <span class="status-dot"></span>
-      <span>SYSTEM OFFLINE</span>
+    <div class="terminal-bar">
+
+      <div class="terminal-controls">
+        <span class="control"></span>
+        <span class="control"></span>
+        <span class="control"></span>
+      </div>
+
+      <span class="terminal-title">
+        system — offline
+      </span>
+
     </div>
 
-    <div class="prompt">
-      &gt; Estado
+
+    <div class="terminal-body">
+
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>SISTEMA OFFLINE</span>
+      </div>
+
+
+      <div class="prompt">
+        Estado
+      </div>
+
+
+      <h1>
+        SITIO NO DISPONIBLE
+      </h1>
+
+
+      <p class="message">
+        Este sector de la red está temporalmente no
+        <span class="cursor-tail">disponible.<span class="cursor"></span></span>
+      </p>
+
+
+      <a
+        class="email"
+        href="mailto:contacto@cmd-pro.win"
+      >
+        contacto@cmd-pro.win
+      </a>
+
     </div>
 
-    <h1>
-      SITIO NO DISPONIBLE
-    </h1>
-
-<p>
-  Este sector está temporalmente no disponible.<span class="cursor"></span>
-</p>
-
-<a class="email" href="mailto:contacto@cmd-pro.win">
-  contacto@cmd-pro.win
-</a>
-
-</main>
+  </main>
 
 </body>
 
