@@ -160,6 +160,10 @@ html {
       animation: blink 1s steps(1) infinite;
     }
 
+    .cursor-tail {
+  white-space: nowrap;
+}
+
     @keyframes blink {
       50% {
         opacity: 0;
@@ -217,9 +221,10 @@ html {
       SITIO NO DISPONIBLE
     </h1>
 
-    <p>
-      Este sector de la red esta temporalmente no disponible.<br>.<span class="cursor"></span>
-    </p>
+ <p>
+  Este sector esta temporalmente 
+  <span class="cursor-tail">no disponible.<span class="cursor"></span></span>
+</p>
 
 <a class="email" href="mailto:contacto@cmd-pro.win">
   contacto@cmd-pro.win
