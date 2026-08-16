@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
+  <meta name="theme-color" content="#05070a">
+  <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png?v=1" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1"> 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
 
-  <title>Site Unavailable</title>
+  <title>Sitio no disponible</title>
 
   <style>
     :root {
@@ -24,8 +28,14 @@
       box-sizing: border-box;
     }
 
+    html {
+  min-height: 100%;
+  background: #05070a;
+  color-scheme: dark;
+}
+
     body {
-      min-height: 100vh;
+      min-height: 100dvh;
       margin: 0;
       padding: 24px;
 
@@ -157,19 +167,20 @@
       }
     }
 
-        .email {
+.email {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 48px;
 
-  color: var(--muted);
+  color: var(--accent);
 
   font-size: 0.8rem;
   text-decoration: none;
   letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(53, 255, 154, 0.35);
 }
 
 .email:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
     @media (max-width: 520px) {
@@ -188,7 +199,6 @@
     line-height: 1.65;
   }
 }
-    }
   </style>
 </head>
 
@@ -198,29 +208,27 @@
 
     <div class="status">
       <span class="status-dot"></span>
-      <span>SYSTEM OFFLINE</span>
+      <span>SISTEMA OFFLINE</span>
     </div>
 
     <div class="prompt">
-      &gt; status
+      &gt; Estado
     </div>
 
     <h1>
-      SITE UNAVAILABLE
+      SITIO NO DISPONIBLE
     </h1>
 
     <p>
-      This sector of the network is temporarily unavailable.<br>
-      Check back later.<span class="cursor"></span>
+      Este sector de la red esta temporalmente no disponible.<br>
+      <span class="cursor"></span>
     </p>
 
-<a class="email" href="mailto:contact@cmd-pro.win">
-  contact@cmd-pro.win
+<a class="email" href="mailto:contacto@cmd-pro.win">
+  contacto@cmd-pro.win
 </a>
 
 </main>
-
-  </main>
 
 </body>
 
