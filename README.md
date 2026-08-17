@@ -1,18 +1,18 @@
-## Hi, I'm David 👋
+## Hola, soy David. 👋
 
-Technology enthusiast exploring software, systems & the internet.
+Interesado en tecnología , software, sistemas computacionales e internet.
 
-### Interests
+### Intereses
 - Software 
-- Cybersecurity & privacy
-- iOS & Apple platforms
-- Web technologies
-- Networking & digital infrastructure
+- Ciberseguridad y privacidad
+- iOS y plataformas de Apple
+- Tecnologías web
+- Redes e infraestructura digital
 
-### Exploring
-- How software and systems work
-- New tools and technologies
-- Personal projects and experiments
-- The whole internet
+### Explorando
+- Como es que software y sistemas funcionan
+- Nuevas herramientas y tecnología
+- Proyectos personales y experimentos
+- Todo el internet
 
-Just an enthusiast exploring things that interest me.
+Solo un entusiasta explorando cosas que me interesan.
