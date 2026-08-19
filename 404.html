@@ -130,6 +130,7 @@
        ========================= */
 
     .terminal-bar {
+      position: relative;
       min-height: 42px;
 
       padding: 0 14px;
@@ -275,27 +276,39 @@
        EMAIL
        ========================= */
 
-    .email {
-      width: fit-content;
-
+    .contact-line {
       margin-top: 44px;
 
-      display: inline-block;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
 
+      color: var(--muted);
+
+      font-size: clamp(0.55rem, 2.8vw, 0.76rem);
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+    }
+
+    .contact-prompt,
+    .contact-label {
+      color: var(--muted);
+    }
+
+    .email {
       color: var(--accent);
 
-      font-size: 0.76rem;
-
+      font-size: inherit;
       text-decoration: none;
-      letter-spacing: 0.8px;
 
       text-shadow:
         0 0 8px rgba(53, 255, 154, 0.28);
     }
 
-    .email::before {
-      content: "> ";
-      color: var(--muted);
+    .email:focus-visible {
+      border-radius: 2px;
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
 
 @media (hover: hover) and (pointer: fine) {
@@ -356,21 +369,22 @@
         line-height: 1.7;
       }
 
-      .email {
-        margin-top: 38px;
-
-        font-size: 0.72rem;
-      }
     }
 
 
     @media (max-width: 350px) {
-  h1 {
-    font-size: 1.55rem;
-  }
-}
       h1 {
         font-size: 1.55rem;
+      }
+
+      .contact-line {
+        letter-spacing: 0.2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor {
+        animation: none;
       }
     }
 
@@ -384,7 +398,7 @@
 
     <div class="terminal-bar">
 
-      <div class="terminal-controls">
+      <div class="terminal-controls" aria-hidden="true">
         <span class="control"></span>
         <span class="control"></span>
         <span class="control"></span>
@@ -416,16 +430,15 @@
 
       <p class="message">
         Este sector de la red está temporalmente no
-        <span class="cursor-tail">disponible.<span class="cursor"></span></span>
+        <span class="cursor-tail">disponible.<span class="cursor" aria-hidden="true"></span></span>
       </p>
 
 
-      <a
-        class="email"
-        href="mailto:cmdavid@cmd-pro.win"
-      >
-        cmdavid@cmd-pro.win
-      </a>
+      <div class="contact-line">
+        <span class="contact-prompt" aria-hidden="true">&gt;</span>
+        <span class="contact-label">Correo de contacto:</span>
+        <a class="email" href="mailto:cmdavid@cmd-pro.win">cmdavid@cmd-pro.win</a>
+      </div>
 
     </div>
 
