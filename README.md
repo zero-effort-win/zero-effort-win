@@ -14,5 +14,3 @@ Interesado en la tecnología en general, software, sistemas computacionales e in
 - Nuevas herramientas y tecnología.
 - Proyectos personales y experimentos.
 - Todo el internet.
-
-Entusiasta explorando cosas que le interesan.
