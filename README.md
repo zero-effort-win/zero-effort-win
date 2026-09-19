@@ -1,6 +1,6 @@
 ## Hola, soy David. 👋
 
-Interesado en la tecnología en general, software, sistemas e internet.
+Interesado en tecnología, software, sistemas e internet.
 
 ### Intereses
 - Software.
